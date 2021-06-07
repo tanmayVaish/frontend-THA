@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+
+    align-items: center;
+    height: 100vh;
+}
+
+.clock{
+    width: 500px;
+    height: 500px;
+    background-color: dimgray;
+    border-radius: 50%;
+    border: 10px solid #000;
+    justify-content:  center;
+    margin:  auto;
+    position: relative;
+}
+
+.second, .minute, .hour{
+    position: absolute;
+    transform-origin: bottom;
+}
+
+.second{
+    height: 250px;
+    width: 5px;
+    left:245px;
+    background: gold;
+    z-index: 3;
+}
+.minute {
+    top: 50px;
+    height: 200px;
+    width: 5px;
+    left: 242.5px;
+    background: brown;
+    z-index: 2;
+}
+.hour{
+    top:100px;
+    height: 150px;
+    width: 5px;
+    background: green;
+    z-index: 1;
+    left:242px;
+}
+
+.gola{
+    top: 241px;
+    left: 240px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    height: 13px;
+    width: 13px;
+    z-index: 7;
+}
+
+.hour {
+    animation: tan 43200s infinite linear;
+}
+.minute {
+    animation: tan 3600s infinite linear;
+}
+.second {
+    animation: tan 60s infinite linear;
+}
+
+
+@keyframes tan{
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.three,.six,.nine,.twelve
+{
+    font-family: arial;
+    font-size: 50px;
+    color: #000000;
+    text-shadow: 0 0 10px red;
+    z-index: 0;
+    text-align: center;
+}
+
+
+.three{
+    right: 0;
+    top: 227px;
+    position: absolute;
+}
+.six{
+    top: 450px;
+    right: 239px;
+    position: absolute;
+}
+.nine{
+    left: 0;
+    top: 227px;
+    position: absolute;
+}
+.twelve{
+    top: 0;
+    right: 227px;
+    position: absolute;
+}
