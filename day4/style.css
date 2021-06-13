@@ -6,14 +6,14 @@
 body{
     align-items: center;
     height: 100vh;
+    background-color:black;
 }
 
 .clock{
     width: 500px;
     height: 500px;
-    background-color: dimgray;
+    background-color: purple;
     border-radius: 50%;
-    border: 10px solid #000;
     justify-content:  center;
     margin:  auto;
     position: relative;
@@ -28,7 +28,7 @@ body{
     height: 250px;
     width: 5px;
     left:245px;
-    background: gold;
+    background: white;
     z-index: 3;
 }
 .minute {
@@ -36,7 +36,7 @@ body{
     height: 200px;
     width: 5px;
     left: 242.5px;
-    background: brown;
+    background: yellow;
     z-index: 2;
 }
 .hour{
