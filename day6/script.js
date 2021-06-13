@@ -9,4 +9,16 @@ function is_array(i) {
     return Array.isArray(i);
 }
 
-console.log(is_array("asdada"));
+function array_Clone(array){
+
+    let i = array.length;
+    let arrayCopy = [];
+    while (i--) {
+        arrayCopy[array.length - i -1] =  array[i];
+    }
+    return arrayCopy;
+}
+
+
+console.log(is_array([1,3,4,5,5,6]));
+console.log(array_Clone([1,2,3,4,5]));
