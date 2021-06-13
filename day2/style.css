@@ -1,7 +1,7 @@
 body {
   font-size: 1.3em;
   text-align: justify;
-  background: url("./bg.jpg") no-repeat;
+  background: url("./bg.jpeg") no-repeat;
   background-size: cover;
 
   /* background: linear-gradient(90deg, #81a1c1 92%, #2e3440 10%); */
