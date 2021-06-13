@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 body{
     display: flex;
@@ -48,7 +49,9 @@ body{
     top: 110px;
     padding:5%;
     width: 100%;
+
 }
+
 .digit
 {
     background-color: rgba(0,0,0,0.75);
@@ -61,4 +64,10 @@ body{
     margin: 3px;
     border-radius: 50%;
     box-shadow: 1px 5px 3px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+.digit:active {
+    transform: scale(0.90);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+    transition: all 0.5s;
 }
