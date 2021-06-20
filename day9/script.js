@@ -26,6 +26,5 @@
 
  const gridElements = document.querySelector('.grid');
  const contents = document.getElementsByClassName('content');
-
  makingGrid(36);
  click(contents);
