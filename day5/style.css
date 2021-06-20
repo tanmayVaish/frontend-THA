@@ -21,7 +21,6 @@ body{
     position: relative;
     box-shadow: 15px 15px 10px rgba(0,0,0,0.3);
 }
-
 .display
 {
     margin-top: 3.5%;
@@ -49,9 +48,7 @@ body{
     top: 110px;
     padding:5%;
     width: 100%;
-
 }
-
 .digit
 {
     background-color: rgba(0,0,0,0.75);

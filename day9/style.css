@@ -15,7 +15,7 @@ body{
     background-color: #c24a2cc7;
     grid-template-columns: repeat(6,auto);
     position: absolute;
-    margin-top: 25vh;
+    margin-top: 2vh;
     border: black 2px solid;
     margin-left: 15vw;
     width: 70vw;
@@ -37,6 +37,9 @@ body{
 }
 
 .screen{
+    text-align: center;
+    color: whitesmoke;
+    padding: 6px;
     background-color:#2c0703;
     margin-left: 10vw;
     height: 25px;
@@ -45,3 +48,14 @@ body{
     border-top-right-radius: 12px;
 
 }
+.counter{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 2vh;
+    height: 200px;
+}
+.booked,.left{
+    padding: 20px;
+    text-align: center;
+}
+
