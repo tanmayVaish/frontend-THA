@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: darkslategray;
+}
+.grid{
+    margin-top: 20vh;
+    display: grid;
+    background-color: black;
+    grid-template-columns: repeat(6,auto);
+    position: absolute;
+    margin-top: 2vh;
+    margin-left: 15vw;
+    width: 70vw;
+}
+.content{
+    background-color: darkblue;
+    margin: 3px;
+    padding: 60px;
+    height: 100px;
+    cursor: pointer;
+}
+.content:hover{
+    background-color: black;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+}
+.content_clicked
+{
+    background-color: black;
+}
