@@ -2,6 +2,9 @@
 
 This repository is dedicated to my project done on frontend development done with my team in Devsnest.
 
+## Day 5: Calculator
+
+![Screenshot from 2021-06-26 19-06-12](https://user-images.githubusercontent.com/55585498/123514661-b0e0a580-d6b1-11eb-9375-21e1e9993bde.png)
 
 ## Day 9: Seat Booking Interface
 
