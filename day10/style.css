@@ -9,51 +9,36 @@ body{
 }
 
 .grid{
-    margin-top: 30vh;
+    margin-top: 20vh;
     display: grid;
     grid-template-columns: repeat(6,auto);
     justify-content: center;
 }
 
-
-
-
-.content {
-    background-color: purple;
-    height: 170px;
-    width: 200px;
-    perspective: 1000px;
+.content{
+    margin: 2vh;
+    height: 150px;
+    width: 150px;
 }
 
-.content_inner {
+.card{
+    border: black 2px solid;
+    width: 100%;
+    height: 100%;
     position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
+    transition: transform 1s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
-
-.content:active .content_inner {
-    transform: rotateY(180deg);
-}
-
-.content_front, .content_back {
+.card_face{
     position: absolute;
-    width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
+    width: 100%;
     backface-visibility: hidden;
 }
-
-.content_front {
-    background-color: #bbb;
-    color: black;
+.card_front{
+    background-color: red;
 }
-
-.content_back {
-    background-color: #2980b9;
-    color: white;
-    transform: rotateY(180deg);
+.card_back{
+    background-color: greenyellow;
+    transform:rotateY(180deg);
 }
