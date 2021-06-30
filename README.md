@@ -9,3 +9,7 @@ This repository is dedicated to my project done on frontend development done wit
 ## Day 9: Seat Booking Interface
 
 ![Screenshot from 2021-06-25 21-43-36](https://user-images.githubusercontent.com/55585498/123454677-72d67980-d5fe-11eb-8b55-f64ff44e0e7b.png)
+
+## Day 10: Memory-Flipping Game
+
+![Screenshot from 2021-06-30 22-51-11](https://user-images.githubusercontent.com/55585498/124004618-d1806680-d9f5-11eb-9146-f3b3146c780d.png)
