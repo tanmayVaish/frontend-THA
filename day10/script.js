@@ -6,6 +6,7 @@ let img = []
 let play_again = document.querySelector('.play_again');
 let moves_left = document.querySelector('.left_dig');
 
+
 function makingGrid(n)
 {
     for(let i=0;i<n;i++)
@@ -22,6 +23,7 @@ function makingGrid(n)
         card_front.classList.add('card_front');
         card_back.classList.add('card_face');
         card_back.classList.add('card_back');
+        card_back.innerHTML = '<i class="fa fa-cloud fa-2x fa-spin"></i>'
         card.appendChild(card_front);
         card.appendChild(card_back);
     }

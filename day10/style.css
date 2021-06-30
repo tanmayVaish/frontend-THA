@@ -43,6 +43,9 @@ body{
     background-color: red;
 }
 .card_back{
+    line-height: 10vh;
+    align-items: center;
+    text-align: center;
     background-color: greenyellow;
     transform:rotateY(180deg);
 }
@@ -63,6 +66,7 @@ body{
 }
 
 .heading{
+    font-style: italic;
     padding: 1.5vh;
     color: whitesmoke;
     height: 6vh;
