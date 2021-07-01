@@ -1,11 +1,19 @@
 let grid = document.querySelector('.grid');
 let c=0;
-let life=12;
+let score=0;
+let life=24;
 let arr = [];
-let img = []
+let fonts = ['fa fa-cloud fa-2x','fa fa-shield fa-2x','fa fa-truck fa-2x'
+    ,'fa fa-solid fa-circle fa-2x','fa fa-lock fa-2x','fa fa-book fa-2x',
+    'fa fa-heart fa-2x','fa fa-user fa-2x','fa fa-play fa-2x',
+    'fa fa-fire fa-2x','fa fa-wifi fa-2x','fa fa-anchor fa-2x','fa fa-cloud fa-2x','fa fa-shield fa-2x','fa fa-truck fa-2x'
+    ,'fa fa-solid fa-circle fa-2x','fa fa-lock fa-2x','fa fa-book fa-2x',
+    'fa fa-heart fa-2x','fa fa-user fa-2x','fa fa-play fa-2x',
+    'fa fa-fire fa-2x','fa fa-wifi fa-2x','fa fa-anchor fa-2x'];
+
+let scoreBoard = document.querySelector('.score_dig');
 let play_again = document.querySelector('.play_again');
 let moves_left = document.querySelector('.left_dig');
-
 
 function makingGrid(n)
 {
@@ -21,9 +29,12 @@ function makingGrid(n)
         const card_back = document.createElement('div');
         card_front.classList.add('card_face');
         card_front.classList.add('card_front');
+        let random = fonts[Math.floor(Math.random()*fonts.length)];
+        card_back.classList = random;
+        let index = fonts.indexOf(random);
+        fonts.splice(index, 1);
         card_back.classList.add('card_face');
         card_back.classList.add('card_back');
-        card_back.innerHTML = '<i class="fa fa-cloud fa-2x fa-spin"></i>'
         card.appendChild(card_front);
         card.appendChild(card_back);
     }
@@ -34,12 +45,18 @@ function doFlip() {
         card.addEventListener('click', function () {
             if(c===2)
             {
-                arr[0].classList.remove('flip_card');
-                arr[1].classList.remove('flip_card');
+                if(arr[0].innerHTML == arr[1].innerHTML){
+                    score=score+100;
+                    scoreBoard.innerHTML = score;
+                }
+                else {
+                    arr[0].classList.remove('flip_card');
+                    arr[1].classList.remove('flip_card');
+                    life--;
+                    moves_left.innerText = life;
+                }
                 c = 0;
-                arr=[];
-                life--;
-                moves_left.innerText = life;
+                arr = [];
                 if(life === 0){
                     body.removeChild(grid);
                     const game_over= document.createElement('div');
