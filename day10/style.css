@@ -44,7 +44,8 @@ body{
     background-color: red;
 }
 .card_back{
-    line-height: 10vh;
+    color: black;
+    padding: 5vh;
     align-items: center;
     text-align: center;
     background-color: greenyellow;

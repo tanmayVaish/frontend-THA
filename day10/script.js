@@ -2,6 +2,7 @@ let grid = document.querySelector('.grid');
 let c=0;
 let score=0;
 let life=24;
+let Boxes = 24;
 let arr = [];
 let fonts = ['fa fa-cloud fa-2x','fa fa-shield fa-2x','fa fa-truck fa-2x'
     ,'fa fa-solid fa-circle fa-2x','fa fa-lock fa-2x','fa fa-book fa-2x',
@@ -14,6 +15,14 @@ let fonts = ['fa fa-cloud fa-2x','fa fa-shield fa-2x','fa fa-truck fa-2x'
 let scoreBoard = document.querySelector('.score_dig');
 let play_again = document.querySelector('.play_again');
 let moves_left = document.querySelector('.left_dig');
+
+function gameOver(str){
+    body.removeChild(grid);
+    const game_over= document.createElement('div');
+    game_over.className = 'over';
+    body.appendChild(game_over);
+    game_over.innerText = str;
+}
 
 function makingGrid(n)
 {
@@ -42,6 +51,9 @@ function makingGrid(n)
 
 function doFlip() {
     for (let card of cards) {
+        if(score == (Boxes*100)){
+            gameOver("YOU WIN");
+        }
         card.addEventListener('click', function () {
             if(c===2)
             {
@@ -58,11 +70,9 @@ function doFlip() {
                 c = 0;
                 arr = [];
                 if(life === 0){
-                    body.removeChild(grid);
-                    const game_over= document.createElement('div');
-                    game_over.className = 'over';
-                    body.appendChild(game_over);
-                    game_over.innerText = "Game Over";
+                    gameOver("GAME OVER");
+                    play_again.style.marginTop = '30vh';
+                    play_again.innerHTML = "Play Again";
                 }
             }
             card.classList.add('flip_card');
@@ -73,7 +83,7 @@ function doFlip() {
 }
 
 
-makingGrid(24);
+makingGrid(Boxes);
 let cards = document.querySelectorAll('.card');
 let body = document.querySelector('body');
 doFlip();
