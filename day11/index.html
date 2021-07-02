@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="startButton"><button>Start Quiz</button></div>
+
+<div class="infoBox">
+    <div class="infoTitle">
+        <span>Rules</span>
+    </div>
+    <div class="infoList">
+        <div class="info">1. You will be given <span>20 sec</span> to answer each question.</div>
+        <div class="info">2. Rule 2</div>
+        <div class="info">3. Rule 3</div>
+    </div>
+    <div class="infoButtons">
+        <button class="quit">Exit</button>
+        <button class="restart">Continue</button>
+    </div>
+</div>
+
+<div class="quizBox">
+    <header>
+        <div class="quizTitle">Computer Quiz</div>
+        <div class="quizTimer">
+            <div class="timer">Time Left:</div>
+            <div class="timerSec">20</div>
+        </div>
+    </header>
+
+    <section>
+        <div class="questionTitle">
+            <span>ALU stands for?</span>
+        </div>
+        <div class="optionList">
+            <div class="option">
+                <span>Arithmetic Logic Unit</span>
+                <div class="icon tick"><i class="fa fa-check"></i></div>
+            </div>
+            <div class="option">
+                <span>Application Logic Unit</span>
+                <div class="icon cross"><i class="fa fa-times"></i></div>
+            </div>
+            <div class="option">
+                <span>Array Logic Unit</span>
+            </div>
+            <div class="option">
+                <span>None of the Above</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="totalQues">
+            <span><p>1</p>of<p>5</p>Questions</span>
+        </div>
+        <div class="nextBtn">Next</div>
+    </footer>
+</div>
+
+</body>
+</html>

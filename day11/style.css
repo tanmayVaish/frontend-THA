@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background-color: rebeccapurple;
+}
+
+.startButton, .infoBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.startButton button{
+    display: none;
+    cursor: pointer;
+    font-size: 3.5vh;
+    font-weight: 1000;
+    color: greenyellow;
+    padding: 1.5vh 3vh;
+    border-radius: 10px;
+    background-color: black;
+    border: greenyellow solid 3px;
+}
+
+.startButton button:hover{
+    cursor: pointer;
+    font-size: 3.5vh;
+    font-weight: 1000;
+    color: black;
+    padding: 1.5vh 3vh;
+    border-radius: 10px;
+    background-color: greenyellow;
+    border: black solid 3px;
+}
+
+.infoBox{
+    display: none;
+    width: 50vw;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.infoTitle{
+    color: greenyellow;
+    height: 5vh;
+    width: 100%;
+    padding: 3vh 5vh 5vh 5vh;
+    font-weight: 800;
+    font-size: 3vh;
+    border-bottom: white 2px solid;
+}
+.infoList{
+    color: white;
+    padding: 1vh 5vh 1vh 5vh;
+    border-bottom: white 2px solid;
+}
+.info{
+    margin: 1.5vh;
+    font-size: 2.5vh;
+}
+.info span{
+    color: greenyellow;
+    font-weight: 800;
+}
+.infoBox .infoButtons{
+    display: flex;
+    padding: 2vh;
+    flex-direction: row-reverse;
+}
+.infoBox .infoButtons button{
+    padding: 1vh 1vw;
+    margin: 4px;
+    width:9vw;
+    background-color: black;
+    color: greenyellow;
+    border-radius: 5px;
+    font-weight: 1000;
+    cursor: pointer;
+    border: greenyellow 2px solid;
+}
+.infoBox .infoButtons button:hover{
+    padding: 1vh 1vw;
+    margin: 4px;
+    width:9vw;
+    background-color: greenyellow;
+    color: black;
+    border-radius: 5px;
+    font-weight: 1000;
+    cursor: pointer;
+    border: black 2px solid;
+}
+
+
+.quizBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.quizBox{
+    color: white;
+    background-color: black;
+    width: 55vw;
+}
+
+.quizBox header{
+    padding: 3vh;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.quizBox header .quizTimer{
+    transform: translate(0%,-15%);
+    font-size: 3vh;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: deepskyblue;
+    color: black;
+    padding: 1vh;
+    border-radius: 10px;
+}
+.quizTitle{
+    font-size: 3vh;
+    font-weight: 800;
+}
+
+.questionTitle{
+    font-size: 4vh;
+    height: 8vh;
+    width: 100%;
+    padding: 2vh 5vw;
+}
+
+.optionList{
+    padding: 0 4vw;
+}
+
+.option{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 1vh;
+    border-radius: 10px;
+    background: greenyellow;
+    border: greenyellow 2px solid;
+
+    color: black;
+    margin: 1vh;
+}
+
+.option:hover{
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh;
+    border-radius: 10px;
+    background: black;
+    color: greenyellow;
+    border: greenyellow 2px solid;
+    margin: 1vh;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vh;
+}
+
+
+.totalQues span{
+    font-size: 2vh;
+    display: flex;
+    justify-content: space-between;
+}
+.totalQues span p{
+    color: deepskyblue;
+    font-weight: 800;
+    font-size: 2vh;
+    padding: 0 5px;
+}
+
+.nextBtn:hover{
+    padding: 1vh 0vw;
+    text-align: center;
+    width:9vw;
+    background-color: greenyellow;
+    color: black;
+    border-radius: 5px;
+    font-weight: 1000;
+    cursor: pointer;
+    border: black 3px solid;
+    transform: translate(0%,-15%);
+}
+.nextBtn{
+    text-align: center;
+    padding: 1vh 0vw;
+    width:9vw;
+    background-color: black;
+    color: greenyellow;
+    border-radius: 5px;
+    font-weight: 1000;
+    cursor: pointer;
+    border: greenyellow 3px solid;
+    transform: translate(0%,-20%);
+}
+
