@@ -5,7 +5,7 @@
     <title>Quiz Game</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="script.js" type="module" defer></script>
 </head>
 <body>
 
@@ -17,8 +17,8 @@
     </div>
     <div class="infoList">
         <div class="info">1. You will be given <span>20 sec</span> to answer each question.</div>
-        <div class="info">2. Rule 2</div>
-        <div class="info">3. Rule 3</div>
+        <div class="info">2. There will be total 10 question.</div>
+        <div class="info">3. Relax and attempt them all, there will be <span>NO NEGATIVE MARKING</span>.</div>
     </div>
     <div class="infoButtons">
         <button class="quit">Exit</button>
@@ -59,7 +59,7 @@
 
     <footer>
         <div class="totalQues">
-            <span><p>1</p>of<p>5</p>Questions</span>
+            <span><p id="counter">1</p>of<p>10</p>Questions</span>
         </div>
         <div class="nextBtn">Next</div>
     </footer>

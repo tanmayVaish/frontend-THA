@@ -1,6 +1,7 @@
+export default
 [{
   "id": "1",
-  "question": "ALU stands for",
+  "question": "ALU stands for?",
   "a": "Arithmetic Logic Unit",
   "b": "Application Logic Unit",
   "c": "Array Logic Unit",
