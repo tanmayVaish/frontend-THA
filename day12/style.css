@@ -1,0 +1,67 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: #fff;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    border: white 2px solid;
+    top: 5vh;
+}
+
+.todo, .progress, .done{
+    height: 80vh;
+    width: 33vw;
+    border:2px white dashed;
+    padding: 1vh;
+}
+.title{
+    line-height: 5vh;
+    text-align: center;
+    height: 5vh;
+    width: 100%;
+}
+
+.element{
+    padding: 1vh;
+    height: 7vh;
+    width: 100%;
+    border: white 2px solid;
+    /*background-color: white;*/
+    border-radius: 10px;
+    color: white
+}
+
+.add{
+    margin-top: 4.2vh;
+    margin-left: 1vw;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    height: 3vh;
+    width: 5vw;
+    text-align: center;
+    line-height: 3vh;
+    border-radius: 10px;
+}
+
+.additions{
+    position: relative;
+    justify-content: center;
+    top: 0;
+    display: flex;
+    margin-top: 5vh;
+}
+
+#fname{
+    height: 3vh;
+    width: 24vw;
+}
+
