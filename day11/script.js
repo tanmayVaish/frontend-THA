@@ -1,76 +1,89 @@
 import questions from "./questions.js";
 
+let i = 0;
+
+let previousOption = 0;
+let correctCount = 0;
+
+let startBtn = document.querySelector('.startButton');
 let infoBox = document.querySelector('.infoBox');
+
+let restart = document.querySelector('.restart');
+let quit = document.querySelector('.quit');
 let quizBox = document.querySelector('.quizBox');
-let startButton = document.querySelector('.startButton button');
-let exit = document.querySelector('.quit');
-let cont = document.querySelector('.restart');
-let nextBtn =document.querySelector('.nextBtn');
-let questionTitle = document.querySelector('.questionTitle');
-let options = document.querySelectorAll('.option');
+
+let questionTitle = document.querySelector('.questionTitle span');
+let option = document.querySelectorAll('.option');
+
+let nextBtn = document.querySelector('.nextBtn');
+
 let counter = document.querySelector('#counter');
-let timer = document.querySelector('.timerSec');
 
-function startGame(){
-    startButton.addEventListener('click',function (){
-       startButton.style.display = 'none';
-       infoBox.style.display = 'block';
-    });
+startBtn.addEventListener('click', function () {
+    startBtn.style.display = 'none';
+    infoBox.style.display = 'block';
+})
+
+quit.addEventListener('click', function () {
+    infoBox.style.display = 'none';
+    startBtn.style.display = 'block';
+})
+
+restart.addEventListener('click', function () {
+    infoBox.style.display = 'none';
+    quizBox.style.display = 'block';
+    addQuestion();
+})
+
+nextBtn.addEventListener('click', addQuestion);
+
+function addQuestion() {
+    if (i === 10) return;
+    if (previousOption != 0) {
+        previousOption.classList.remove('correctColor')
+    }
+    questionTitle.innerHTML = questions[i]['question'];
+    option[0].innerText = questions[i]['a'];
+    option[1].innerText = questions[i]['b'];
+    option[2].innerText = questions[i]['c'];
+    option[3].innerText = questions[i]['d'];
+    counter.innerText = i + 1;
+    checkCorrect(questions[i]);
+    i++;
 }
 
-function continueGame(){
-    exit.addEventListener('click',function (){
-        window.location.href = '';
-    });
-    cont.addEventListener('click',function (){
-        infoBox.style.display = 'none';
-        quizBox.style.display = 'block';
-    });
+function checkCorrect(question) {
+    if (previousOption != 0) {
+        previousOption.classList.remove('correct');
+    }
+    if (question['answer'] === 'a') {
+        option[0].classList.add('correct');
+        applyCorrect(option[0], previousOption);
+        previousOption = option[0];
+    } else if (question['answer'] === 'b') {
+        option[1].classList.add('correct');
+        applyCorrect(option[1], previousOption);
+        previousOption = option[1];
+    } else if (question['answer'] === 'c') {
+        option[2].classList.add('correct');
+        applyCorrect(option[2], previousOption);
+        previousOption = option[2];
+    } else if (question['answer'] === 'd') {
+        option[3].classList.add('correct');
+        applyCorrect(option[3], previousOption);
+        previousOption = option[3];
+    }
 }
 
-function waiting(ms){
-    return new Promise( resolve => {
-        setTimeout(() => {
-            resolve('')
-        }, ms);
-    })
-}
-function nextQuestion(){
-    nextBtn.addEventListener('click',async function (){
-        for(let question of questions){
-            questionTitle.innerHTML = question['question'];
-            options[0].innerHTML = question['a'];
-            options[1].innerHTML = question['b'];
-            options[2].innerHTML = question['c'];
-            options[3].innerHTML = question['d'];
-            counter.innerHTML = question['id'];
-            let option = checkCorrect(question);
-            option.classList.remove('correct');
-            await waiting(5000);
+
+function applyCorrect(opt, prev) {
+    opt.addEventListener('click', function () {
+        if (opt.classList.contains('correct')) {
+            opt.classList.add('correctColor');
         }
     });
 }
 
-function checkCorrect(question){
-    if(question['answer'] == 'a'){
-        options[0].classList.add('correct');
-        return options[0];
-    }
-    else if(question['answer'] == 'b'){
-        options[1].classList.add('correct');
-        return options[1];
-    }
-    else if(question['answer'] == 'c'){
-        options[2].classList.add('correct');
-        return options[2];
-    }
-    else if(question['answer'] == 'd'){
-        options[3].classList.add('correct');
-        return options[0];
-    }
+function applyWrong(){
+
 }
-
-
-startGame();
-continueGame();
-nextQuestion();
