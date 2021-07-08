@@ -65,3 +65,8 @@ body{
     width: 24vw;
 }
 
+.deleteBtn{
+    height: 2vh;
+    width: 2vw;
+    background-color: red;
+}
