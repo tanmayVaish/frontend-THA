@@ -1,0 +1,19 @@
+.item{
+    background-color: tomato;
+    height: 10vh;
+    width: 50vw;
+    color: darkgreen;
+    padding: 2vh 2vh 7vh 2vh;
+    margin: 2vh;
+    border-radius: 5px;
+    box-shadow: red 4px 4px 5px 2px;
+    font-size: 2vh;
+}
+
+.title{
+    color: black;
+}
+
+span{
+    color: yellow;
+}
