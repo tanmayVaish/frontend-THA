@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 export const StyledCard = styled.div`
     
+  display: block;
   position: absolute;
-  width: 20vw;
-  height: 30vh;
   
   transform: translate(-50%,-50%);
   

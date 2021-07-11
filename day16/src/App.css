@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+
+.white{
+  background-color: white;
+}
+
+.black{
+  background-color: black;
+}
+
+.reverse{
+  grid-auto-flow: dense;
+  direction: rtl;
+}
