@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: purple;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    flex-flow: column;
+}
+.head{
+    position: relative;
+    top: 10vh;
+    font-size: 10vh;
+    margin-bottom: 20vh;
+}
+.container{
+    background-color: darkblue;
+    color: white;
+    padding: 5vh;
+    font-size: 8vh;
+    border-radius: 10px;
+}
+.update{
+    margin-top: 5vh;
+    border-radius: 20px;
+    padding: 2vh;
+    font-size: 4vh;
+}
