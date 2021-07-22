@@ -6,7 +6,7 @@
     padding: 2vh 2vh 7vh 2vh;
     margin: 2vh;
     border-radius: 5px;
-    box-shadow: red 4px 4px 5px 2px;
+    box-shadow: red 0 0 1.2vh 0.5vh;
     font-size: 2vh;
     display: flex;
     justify-content: space-between;

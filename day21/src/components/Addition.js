@@ -2,6 +2,10 @@ import './styles/Addition.css'
 
 const Addition = () => {
 
+    const getValue = () => {
+        
+    }
+
     return (
         <div className={'inputs'}>
             <div>
@@ -13,10 +17,10 @@ const Addition = () => {
                 <input type={'number'} id={'calories'} placeholder={'Calories'}/>
             </div>
             <div>
-                <button>Add</button>
+                <button onClick={getValue}>Add</button>
             </div>
         </div>
     )
-
 }
 export default Addition;
+
