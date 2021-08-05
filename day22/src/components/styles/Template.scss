@@ -1,16 +1,14 @@
-
 .mainPage{
-  background-color: #333;
-  color: lightblue;
+  background-color: #C43B5E;
+  color: #D8DEE9;
   .mainPageTitle{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3vmin;
+    font-size: 5.5vmin;
     padding: 3vmin;
   }
   .templates{
-    border: black 0.6vmin solid;
     margin: 1vmin;
     border-radius: 5vmin;
     .template {
@@ -25,10 +23,10 @@
         background-size: cover;
         border-radius: 4vmin;
         transition: all .2s ease-in-out;
-        border: 0.5vmin solid black;
+        border: 0.1vmin solid #D8DEE9;
       }
       .image:hover {
-        border: 0.5vmin solid #61dafb;
+        border: 0.5vmin solid #D8DEE9;
         cursor: pointer;
         width: 100%;
         height: 500px;

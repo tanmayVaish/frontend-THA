@@ -1,5 +1,6 @@
 .memePage{
-  background-color: #333;
+  background-color: #C43B5E;
+  color: #D8DEE9;
   height: 100vh;
   display: grid;
   place-content: center;
@@ -7,21 +8,22 @@
     width: 50vw;
     padding: 3vmin;
     border-radius: 1vmin;
-    border:1vmin solid #3B4252;
+    border:1vmin solid #4C566A;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-flow: column;
-    background-color: #81a1c1;
+    background-color:#3BC4A1;
 
     .memePageImg{
       img{
+        border-radius: 2vmin;
+        border: 0.8vmin solid #D8DEE9;
         height: 500px;
       }
     }
 
     .memePageInp{
-      background-color: lightblue;
       border-radius: 1vmin;
       margin: 1vmin;
       display: grid;
@@ -36,36 +38,34 @@
       display: flex;
       justify-content: space-evenly;
       margin: 2vmin;
+      font-size: 2.5vmin;
       font-weight: 800;
       .goBack{
+        background-color: #C43B5E;
         margin: 1vmin;
-        background-color: black;
-        color: lightblue;
-        font-size: 2vmin;
+        color: #D8DEE9;
         padding: 2vmin;
         border-radius: 1vmin;
         user-select: none;
         cursor: pointer;
       }
       .generateMeme{
+        background-color: #C43B5E;
         margin: 1vmin;
         user-select: none;
         cursor: pointer;
-        font-size: 2vmin;
         padding: 2vmin;
         border-radius: 1vmin;
-        background-color: black;
-        color: lightblue;
+        color: #D8DEE9;
       }
       .download{
+        background-color: #C43B5E;
         margin: 1vmin;
         user-select: none;
         cursor: pointer;
-        font-size: 2vmin;
         padding: 2vmin;
         border-radius: 1vmin;
-        background-color: black;
-        color: lightblue;
+        color: #D8DEE9;
       }
     }
   }

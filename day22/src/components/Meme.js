@@ -1,12 +1,17 @@
 import './styles/Meme.scss'
 import {useState} from "react";
+import fileDownload from 'js-file-download';
+import axios from "axios";
+
 
 const Meme = (props) => {
+
+    const [link, setLink] = useState(null);
 
     const [form, setForm] = useState({
         template_id: props.meme.id,
         username: "TanmayVaish",
-        password: "1234!1234",
+        password: "1234!123",
         boxes: []
     })
 
@@ -16,10 +21,25 @@ const Meme = (props) => {
             url += `&boxes[${i}][text]=${box.text}`;
         })
         fetch(url).then(res => res.json()).then(data => {
-            if (data.success)
-                props.setMeme({...props.meme, url: data.data.url})
+            if (data.success){
+                setLink(data.data.url);
+                props.setMeme({...props.meme, url: data.data.url});
+            }
+            else{
+                alert("Enter Captions First");
+            }
         })
+        return url;
     }
+
+    function download(link, filename) {
+        axios.get(link, {
+            responseType: 'blob',
+        }).then(res => {
+            fileDownload(res.data, filename);
+        });
+    }
+
 
     return (
         <div className={"memePage"}>
@@ -42,9 +62,11 @@ const Meme = (props) => {
                 </div>
                 <div className={"memePageBtns"}>
                     <div className={"goBack"} onClick={() => props.setMeme(null)}>Go Back</div>
-                    <div className={"generateMeme"} onClick={generateMeme}>Generate Meme</div>
+                    <div className={"generateMeme"} onClick={()=>{
+                        generateMeme();
+                    }}>Generate Meme</div>
                     <div className={"download"} onClick={()=>{
-
+                        download(link,"image.jpeg");
                     }}>Download</div>
                 </div>
             </div>

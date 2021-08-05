@@ -8,7 +8,8 @@ const Home = () =>{
     return(
         <div className={"homePage"}>
             <div className={"homePageTitle"}>
-                <h1>Legend's Meme Generator</h1>
+                <h1>MemeMatic</h1>
+                <h6>A meme generator</h6>
             </div>
             <div className={'homePageBtn'}>
                 <div className={'playBtn'} onClick={()=>setBtnClicked(true)}>Play</div>
