@@ -1,5 +1,4 @@
 import './styles/Items.css'
-import Addition from "./Addition";
 
 const Items = ({itemName, calories, list, updateList}) => {
 

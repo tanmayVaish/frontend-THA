@@ -1,7 +1,6 @@
 import './styles/Container.css'
 import Items from "./Items";
 import {useState} from "react";
-import Addition from "./Addition";
 
 const menu = [
     {
@@ -29,16 +28,28 @@ const Container = () => {
 
     return (
         <div>
+
             <div className={'head'}>
                 <h1>À la carte</h1>
             </div>
-            <div>
-                <Addition/>
+            <div className={'inputs'}>
+                <div>
+                    <label htmlFor="{'itemName'}">Item</label>
+                    <input type={'text'} id={'itemName'} placeholder={'Item Name'}/>
+                </div>
+                <div>
+                    <label htmlFor="{'calories'}">Calories</label>
+                    <input type={'number'} id={'calories'} placeholder={'Calories'}/>
+                </div>
+                <div>
+                    <button>Add</button>
+                </div>
             </div>
             <div className={'contain'}>
                 {
-                    list.map((item, index)=> {
-                        return <Items itemName={item.itemName} calories={item.itemCalories} list={list} updateList={updateList} key={index}/>
+                    list.map((item, index) => {
+                        return <Items itemName={item.itemName} calories={item.itemCalories} list={list}
+                                      updateList={updateList} key={index}/>
                     })
                 }
             </div>

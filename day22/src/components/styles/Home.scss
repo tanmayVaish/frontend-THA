@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+
+.homePage{
+  font-family: 'Rammetto One', cursive;
+  background-color: #333;
+  color: lightblue;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  .homePageTitle{
+    display: grid;
+    place-content: center;
+    font-size: 4vmin;
+  }
+  .homePageBtn{
+    .playBtn{
+      user-select: none;
+      cursor: pointer;
+      font-size: 3vmin;
+      background-color: black;
+      padding: 2vmin;
+      border-radius: 1vmin;
+    }
+  }
+
+}
