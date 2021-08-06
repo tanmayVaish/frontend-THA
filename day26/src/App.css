@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.page{
+  display: flex;
+  height: 100vh;
+  align-content: center;
+  justify-content: center;
+  flex-flow: column;
+  background-color: #333;
+  color: white;
+}
+.inputs{
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+.inputs input{
+  padding: 1vmin;
+  font-size: 2vmin;
+  margin: 1vmin;
+}
+.res{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+}
